@@ -5,6 +5,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/360gunner/GMAO3.0-Config.git
+          uri: https://github.com/360gunner/pfe-config.git
   application:
     name: config-server
