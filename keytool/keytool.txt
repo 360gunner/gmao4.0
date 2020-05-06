@@ -1,0 +1,1 @@
+keytool -genkey -alias Houssem -keyalg RSA -keysize 2048 -dname "CN=ELIT" -keypass bellili -keystore ../../../../Users/sol/Documents/keytool/jwt.jks -storepass bellili

@@ -1,0 +1,10 @@
+server:
+  port: 4018
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/360gunner/GMAO3.0-Config.git
+  application:
+    name: config-server
