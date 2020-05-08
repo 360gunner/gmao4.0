@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/finally';
+import { finalize } from 'rxjs/operators'
 
 @Injectable()
 export class LoginService {
@@ -36,10 +36,10 @@ export class LoginService {
     return [this.authenticated,this.admin];
   }
   logout() {
-      this.http.post('logout', {}).finally(() => {
+      this.http.post('logout', {}).pipe( finalize(() => {
           this.authenticated = false;
           this.admin=false;
-      }).subscribe();
+      })).subscribe();
       return [this.authenticated,this.admin];
   }
 

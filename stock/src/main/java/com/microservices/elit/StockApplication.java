@@ -31,7 +31,7 @@ public class StockApplication {
 	  public Jackson2JsonMessageConverter messageConverter() {
 	    return new Jackson2JsonMessageConverter();
 	  }
-	
+/*	
 	@LoadBalanced
 	@HystrixCommand(commandKey = "home", fallbackMethod = "homeFallback")
 	@RequestMapping("/")
@@ -42,7 +42,7 @@ public class StockApplication {
 	public Message homeFallback() {
 		return null;
 	}
-
+*/
 	public static void main(String[] args) {
 		SpringApplication.run(StockApplication.class, args);
 	}

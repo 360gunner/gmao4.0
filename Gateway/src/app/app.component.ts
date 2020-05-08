@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/finally';
+import { finalize } from 'rxjs/operators'
 import { LoginService } from './login.service';
 
 @Component({

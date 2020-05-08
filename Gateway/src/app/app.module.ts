@@ -5,13 +5,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { LoginService } from './login.service';
-
+//added this
+import { DemandeModule } from './demande/Demande.module';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent
   ],
   imports: [
+//this also
+    DemandeModule,
     AppRoutingModule,
     BrowserModule,
     HttpClientModule
