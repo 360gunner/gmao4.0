@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-
+import { LoginService } from './../login.service';
 @Component({
   selector: 'navbar-cmp',
   templateUrl: 'navbar.component.html'
@@ -8,7 +8,17 @@ export class NavbarComponent {
 
   private sidebarVisible: boolean = false;
 
-  constructor() {
+  constructor(
+    //    private route: ActivatedRoute,
+        private service: LoginService
+    //   , private router: Router
+                  ) {}
+
+
+
+  logout(): void {
+    this.service.logout();
+    location.reload();
   }
 
   sidebarToggle() {

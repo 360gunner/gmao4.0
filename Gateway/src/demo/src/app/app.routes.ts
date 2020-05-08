@@ -10,7 +10,8 @@ export const APP_ROUTES: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    redirectTo: '',
+    pathMatch: 'full'
   },
   {
     path: '**',

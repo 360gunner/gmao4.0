@@ -12,21 +12,21 @@ import org.springframework.stereotype.Service;
 import com.microservices.elit.model.DemandeCRUD;
 
 @Service
-public class RabbitDemandeMaterielMessagingService
+public class RabbitDemandeMessagingService
         {
   
   private RabbitTemplate rabbit;
   
   @Autowired
-  public RabbitDemandeMaterielMessagingService(RabbitTemplate rabbit) {
+  public RabbitDemandeMessagingService(RabbitTemplate rabbit) {
     this.rabbit = rabbit;
   }
   
   public void sendDemande(DemandeCRUD test) {
 	try {  
-	new Queue("DemandeMateriel.queue");}
+	new Queue("Demande.queue");}
 	catch(Exception e) {}
-    rabbit.convertAndSend("DemandeMateriel.queue", test);
+    rabbit.convertAndSend("Demande.queue", test);
   }
   
 }

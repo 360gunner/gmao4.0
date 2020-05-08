@@ -3,7 +3,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.microservices.elit.*;
+
 import com.microservices.elit.model.Demande;
 import com.microservices.elit.model.DemandeCRUD;
 import com.microservices.elit.model.HTTPTYPE;
@@ -15,7 +15,7 @@ private DemandeRepo r;
 public DemandeListener(DemandeRepo rt) {
 this.r=rt;
 }
-@RabbitListener(queues = "DemandeMateriel.queue")
+@RabbitListener(queues = "Demande.queue")
 public void receiveDemande(DemandeCRUD tt) {
 try{
 Demande test = tt.getDemande();

@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @SpringBootApplication
@@ -48,7 +47,7 @@ public class StockApplication {
 	}
 
 }
-
+/*
 class Message {
 	private String id = UUID.randomUUID().toString();
 	private String content;
@@ -68,3 +67,4 @@ class Message {
 		return content;
 	}
 }
+*/

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import com.microservices.elit.messaging.RabbitDemandeMaterielMessagingService;
+import com.microservices.elit.messaging.RabbitDemandeMessagingService;
 import com.microservices.elit.model.Demande;
 import com.microservices.elit.model.DemandeCRUD;
 import com.microservices.elit.model.HTTPTYPE;
@@ -32,7 +32,7 @@ public class DemandeController {
 
 	
 	@Autowired
-	RabbitDemandeMaterielMessagingService r;
+	RabbitDemandeMessagingService r;
 	
 	
 	@GetMapping(path="/Demande",produces="application/json")

@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card\">\n  <div class=\"header\">\n    <h1 class=\"title\">Welcome {{userName}}</h1>\n  </div>\n  <div class=\"content\">\n\n    <div *ngIf=\"needsLogin\" class=\"alert alert-warning\">\n      You have been redirected to this page because you don't have the necessary\n      rights for the reqeusted action. Login with a respective user account!\n    </div>\n\n    <button (click)=\"login()\" class=\"btn btn-default\">Login</button>\n    <button (click)=\"logout()\" class=\"btn btn-default\">Logout</button>\n\n    <!--\n    <tabbed-pane [activeId]=\"0\">\n        <tab title=\"Booked\" [id]=\"0\">\n            This page could display all booked passengers ...\n        </tab>\n        <tab title=\"Checked in\" [id]=\"1\">\n            This page could display all checked in passengers ...\n        </tab>\n\n        <tab title=\"Boarded\" [id]=\"2\">\n            This page could display all boarded passengers ...\n        </tab>\n    </tabbed-pane>\n    -->\n  </div>\n\n</div>\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card\">\n  <div class=\"header\">\n    <h1 class=\"title\">Welcome {{name}}</h1>\n  </div>\n  <div class=\"content\">\n\n    <div *ngIf=\"needsLogin\" class=\"alert alert-warning\">\n      You have been redirected to this page because you don't have the necessary\n      rights for the reqeusted action. Login with a respective user account!\n    </div>\n<!--\n    <button (click)=\"login()\" class=\"btn btn-default\">Login</button>\n    <button (click)=\"logout()\" class=\"btn btn-default\">Logout</button>\n\n    \n    <tabbed-pane [activeId]=\"0\">\n        <tab title=\"Booked\" [id]=\"0\">\n            This page could display all booked passengers ...\n        </tab>\n        <tab title=\"Checked in\" [id]=\"1\">\n            This page could display all checked in passengers ...\n        </tab>\n\n        <tab title=\"Boarded\" [id]=\"2\">\n            This page could display all boarded passengers ...\n        </tab>\n    </tabbed-pane>\n    -->\n  </div>\n\n</div>\n\n\n");
 
 /***/ }),
 
@@ -74,7 +74,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" (click)=\"sidebarToggle()\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar bar1\"></span>\n        <span class=\"icon-bar bar2\"></span>\n        <span class=\"icon-bar bar3\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"#\">GMAO</a>\n    </div>\n    <div class=\"collapse navbar-collapse\">\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li>\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n            <i class=\"ti-panel\"></i>\n            <p>Stats</p>\n          </a>\n        </li>\n        <li class=\"dropdown\">\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n            <i class=\"ti-bell\"></i>\n            <p class=\"notification\">5</p>\n            <p>Notifications</p>\n            <b class=\"caret\"></b>\n          </a>\n          <ul class=\"dropdown-menu\">\n            <li><a href=\"#\">Notification 1</a></li>\n            <li><a href=\"#\">Notification 2</a></li>\n            <li><a href=\"#\">Notification 3</a></li>\n            <li><a href=\"#\">Notification 4</a></li>\n            <li><a href=\"#\">Another notification</a></li>\n          </ul>\n        </li>\n        <li>\n          <a href=\"#\">\n            <i class=\"ti-settings\"></i>\n            <p>Settings</p>\n          </a>\n        </li>\n      </ul>\n\n    </div>\n  </div>\n</nav>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" (click)=\"sidebarToggle()\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar bar1\"></span>\n        <span class=\"icon-bar bar2\"></span>\n        <span class=\"icon-bar bar3\"></span>\n      </button>\n      <button (click)=\"logout()\" class=\"btn btn-default\">Logout</button>\n    </div>\n    <div class=\"collapse navbar-collapse\">\n      <ul class=\"nav navbar-nav navbar-right\">\n       \n       <!-- <li>\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n            <i class=\"ti-panel\"></i>\n            <p>Stats</p>\n          </a>\n        </li>\n        <li class=\"dropdown\">\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n            <i class=\"ti-bell\"></i>\n            <p class=\"notification\">5</p>\n            <p>Notifications</p>\n            <b class=\"caret\"></b>\n          </a>\n          <ul class=\"dropdown-menu\">\n            <li><a href=\"#\">Notification 1</a></li>\n            <li><a href=\"#\">Notification 2</a></li>\n            <li><a href=\"#\">Notification 3</a></li>\n            <li><a href=\"#\">Notification 4</a></li>\n            <li><a href=\"#\">Another notification</a></li>\n          </ul>\n        </li>\n        <li>\n          <a href=\"#\">\n            <i class=\"ti-settings\"></i>\n            <p>Settings</p>\n          </a>\n        </li>-->\n      </ul>\n\n    </div>\n  </div>\n</nav>\n");
 
 /***/ }),
 
@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"sidebar-wrapper\">\n  <div class=\"logo\">\n    <a class=\"simple-text\">\n      <div class=\"logo-img\">\n        <img src=\"../../assets/img/angular2-logo.png\" alt=\"\">\n      </div>\n      GMAO\n    </a>\n  </div>\n  <ul class=\"nav\">\n    <li>\n      <a routerLink=\"home\">\n        <i class=\"ti-home\"></i>\n        <p>Home</p>\n      </a>\n    </li>\n\n    <li>\n      <a routerLink=\"maintenance/Demande\">\n        <i class=\"ti-arrow-top-right\"></i>\n        <p>Maintenance</p>\n      </a>\n    </li>\n\n    <li>\n      <a routerLink=\"stock/Demande\">\n        <i class=\"ti-arrow-top-right\"></i>\n        <p>Stock</p>\n      </a>\n    </li>\n\n\n  </ul>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"sidebar-wrapper\">\n  <div class=\"logo\">\n    <a class=\"simple-text\">\n      <div class=\"logo-img\">\n        <img src=\"../../assets/img/angular2-logo.png\" alt=\"\">\n      </div>\n      GMAO\n    </a>\n  </div>\n  <ul class=\"nav\">\n    <li>\n      <a routerLink=\"home\">\n        <i class=\"ti-home\"></i>\n        <p>Home</p>\n      </a>\n    </li>\n\n    <li >\n      <div [hidden]=\"tpmm\">\n      <a routerLink=\"maintenance/Demande\">\n        <i class=\"ti-arrow-top-right\"></i>\n        <p>Maintenance</p>\n      </a>\n      </div>\n    </li>\n\n    <li >\n      <div [hidden]=\"gest\">\n      <a routerLink=\"stock/Demande\">\n        <i class=\"ti-arrow-top-right\"></i>\n        <p>Stock</p>\n      </a>\n     </div>\n    </li>\n\n\n\n  </ul>\n</div>\n");
 
 /***/ }),
 
@@ -301,7 +301,8 @@ var APP_ROUTES = [
     },
     {
         path: 'home',
-        component: _home_home_component__WEBPACK_IMPORTED_MODULE_1__["HomeComponent"]
+        redirectTo: '',
+        pathMatch: 'full'
     },
     {
         path: '**',
@@ -356,14 +357,20 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+//{ user } from '../user';
 var HomeComponent = /** @class */ (function () {
+    // u : user;
     function HomeComponent(
     //    private route: ActivatedRoute,
     service, router) {
         this.service = service;
         this.router = router;
+        this.name = this.service.getname();
     }
     HomeComponent.prototype.ngOnInit = function () {
+        //this.u=this.service.user;
+        this.name = this.service.getname();
+        console.log('name : ' + this.name);
         // this.needsLogin = !!this.route.snapshot.params['needsLogin'];
     };
     /*  needsLogin: boolean;
@@ -439,9 +446,65 @@ var LoginService = /** @class */ (function () {
         this.authenticated = false;
         this.greeting = {};
     }
+    LoginService.prototype.getgest = function () {
+        var _this = this;
+        /* this.http.get('/oauth2/elit/user/').subscribe(response => {
+           console.log(response)
+           this.data=response;
+           for (var val of this.data.authorities) {
+                 
+             if( val.authority === 'ROLE_GESTOCK' ){
+                 this.gest =true;
+             }
+             
+           }
+         }); */
+        this.http.get('/stock/').subscribe(function (response) {
+            console.log(response);
+            _this.data2 = response;
+            if ((_this.data2.status == 403) || (_this.data2.status == 401))
+                _this.gest = false;
+            else
+                _this.gest = true;
+        });
+        return this.gest;
+    };
+    LoginService.prototype.gettpmm = function () {
+        /*this.http.get('/oauth2/elit/user/').subscribe(response => {
+          console.log(response)
+          this.data=response;
+          for (var val of this.data.authorities) {
+                
+            if( val.authority === 'ROLE_TPMM' ){
+                this.tpmm =true;
+            }
+            
+          }
+        });*/
+        var _this = this;
+        this.http.get('/maintenance/').subscribe(function (response) {
+            console.log(response);
+            _this.data2 = response;
+            if ((_this.data2.status == 403) || (_this.data2.status == 401))
+                _this.tpmm = false;
+            else
+                _this.tpmm = true;
+        });
+        return this.gest;
+    };
+    LoginService.prototype.getname = function () {
+        var _this = this;
+        this.http.get('/oauth2/elit/user/').subscribe(function (response) {
+            console.log(response);
+            _this.data = response;
+            _this.name = _this.data.name;
+        });
+        return this.name;
+    };
     LoginService.prototype.authenticate = function () {
         var _this = this;
-        this.http.get('http://localhost:8080/oauth2/elit/user/').subscribe(function (response) {
+        this.http.get('/oauth2/elit/user/').subscribe(function (response) {
+            console.log(response);
             if (response['name']) {
                 _this.authenticated = true;
                 //  this.http.get('resource').subscribe(data => this.greeting = data);
@@ -461,7 +524,7 @@ var LoginService = /** @class */ (function () {
     };
     LoginService.prototype.logout = function () {
         var _this = this;
-        this.http.post('http://localhost:8080/logout', {}).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["finalize"])(function () {
+        this.http.post('/logout', {}).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["finalize"])(function () {
             _this.authenticated = false;
             _this.admin = false;
         })).subscribe();
@@ -1000,6 +1063,7 @@ var DemandeNewComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarComponent", function() { return NavbarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _login_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../login.service */ "./src/app/login.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1013,10 +1077,20 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
+
 var NavbarComponent = /** @class */ (function () {
-    function NavbarComponent() {
+    function NavbarComponent(
+    //    private route: ActivatedRoute,
+    service
+    //   , private router: Router
+    ) {
+        this.service = service;
         this.sidebarVisible = false;
     }
+    NavbarComponent.prototype.logout = function () {
+        this.service.logout();
+        location.reload();
+    };
     NavbarComponent.prototype.sidebarToggle = function () {
         var body = document.getElementsByTagName('body')[0];
         if (this.sidebarVisible == false) {
@@ -1028,12 +1102,17 @@ var NavbarComponent = /** @class */ (function () {
             body.classList.remove('nav-open');
         }
     };
+    NavbarComponent.ctorParameters = function () { return [
+        { type: _login_service__WEBPACK_IMPORTED_MODULE_1__["LoginService"] }
+    ]; };
     NavbarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'navbar-cmp',
             template: __importDefault(__webpack_require__(/*! raw-loader!./navbar.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/navbar/navbar.component.html")).default
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_login_service__WEBPACK_IMPORTED_MODULE_1__["LoginService"]
+            //   , private router: Router
+        ])
     ], NavbarComponent);
     return NavbarComponent;
 }());
@@ -1053,24 +1132,56 @@ var NavbarComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SidebarComponent", function() { return SidebarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _login_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../login.service */ "./src/app/login.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
+
+//import { user } from '../user';
 var SidebarComponent = /** @class */ (function () {
-    function SidebarComponent() {
+    //u : user;
+    function SidebarComponent(
+    //    private route: ActivatedRoute,
+    service
+    //   , private router: Router
+    ) {
+        this.service = service;
+        this.tpmm = false;
+        this.gest = false;
+        this.tpmm = this.service.gettpmm();
+        this.gest = this.service.getgest();
     }
+    SidebarComponent.prototype.ngOnInit = function () {
+        //  this.u=this.service.user;
+        this.tpmm = this.service.gettpmm();
+        this.gest = this.service.getgest();
+        console.log('tpmm : ' + this.tpmm);
+        console.log('gest : ' + this.gest);
+    };
+    SidebarComponent.prototype.logout = function () {
+        this.service.logout();
+    };
+    SidebarComponent.ctorParameters = function () { return [
+        { type: _login_service__WEBPACK_IMPORTED_MODULE_1__["LoginService"] }
+    ]; };
     SidebarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'sidebar-cmp',
             template: __importDefault(__webpack_require__(/*! raw-loader!./sidebar.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/sidebar/sidebar.component.html")).default,
-        })
+        }),
+        __metadata("design:paramtypes", [_login_service__WEBPACK_IMPORTED_MODULE_1__["LoginService"]
+            //   , private router: Router
+        ])
     ], SidebarComponent);
     return SidebarComponent;
 }());
