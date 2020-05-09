@@ -65,7 +65,7 @@ public class DemandeController {
 	
 	@PostMapping(path="/Demande",produces="application/json")
 	public @ResponseBody ResponseEntity<?> hello_post(@RequestBody Demande t) { 
-		
+		/*
 		try {
 		if(t.getType().equalsIgnoreCase("Materiel")) {
 			Demande result = tr.save(t);
@@ -84,7 +84,8 @@ public class DemandeController {
 		}}
 		catch(Exception e) {
 			return new ResponseEntity<Demande>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+		} */
+		return new ResponseEntity<Demande>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 	
@@ -92,7 +93,7 @@ public class DemandeController {
 	public @ResponseBody ResponseEntity<?> hello_put(@RequestBody Demande t) { 
 		
 		try {
-		if(t.getType().equalsIgnoreCase("Materiel")) {
+		if((t.getType().equalsIgnoreCase("Materiel"))&&(tr.exists(t.getId()))) {
 			Demande result = tr.save(t);
 			
 			DemandeCRUD tt = new DemandeCRUD(t,HTTPTYPE.PUT);
@@ -115,7 +116,7 @@ public class DemandeController {
 	public @ResponseBody ResponseEntity<?> hello_delete(@RequestBody Demande t) { 
 		
 		try {
-		if(t.getType().equalsIgnoreCase("Materiel")) {
+		if((t.getType().equalsIgnoreCase("Materiel"))&&(tr.exists(t.getId()))) {
 			tr.delete(t);
 			
 			DemandeCRUD tt = new DemandeCRUD(t,HTTPTYPE.DELETE);
@@ -138,7 +139,7 @@ public class DemandeController {
 		
 		try {
 		Demande dd=tr.getOne(id);
-		if(dd.getType().equalsIgnoreCase("Materiel")) {
+		if((dd.getType().equalsIgnoreCase("Materiel"))&&(tr.exists(dd.getId()))) {
 			
 			
 			

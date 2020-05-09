@@ -338,7 +338,7 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\UI\angular-crud-master\demo\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\gmao4.0\Gateway\src\demo\src\styles.css */"./src/styles.css");
 
 
 /***/ })

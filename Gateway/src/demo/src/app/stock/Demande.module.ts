@@ -6,7 +6,7 @@ import { DemandeListComponent } from './Demande-list/Demande-list.component';
 import { DemandeEditComponent } from './Demande-edit/Demande-edit.component';
 import { DemandeService } from './Demande.service';
 import { DEMANDE_ROUTES } from './Demande.routes';
-
+import { StockComponent } from './stock/stock.component';
 
 @NgModule({
   imports: [
@@ -16,7 +16,8 @@ import { DEMANDE_ROUTES } from './Demande.routes';
   ],
   declarations: [
     DemandeListComponent,
-    DemandeEditComponent
+    DemandeEditComponent,
+    StockComponent
   ],
   providers: [DemandeService],
   exports: []

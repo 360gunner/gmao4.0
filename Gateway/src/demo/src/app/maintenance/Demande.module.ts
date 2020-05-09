@@ -7,6 +7,7 @@ import { DemandeEditComponent } from './Demande-edit/Demande-edit.component';
 import { DemandeService } from './Demande.service';
 import { DEMANDE_ROUTES } from './Demande.routes';
 import { DemandeNewComponent } from './demande-new/demande-new.component';
+import { MaintenanceComponent } from './maintenance/maintenance.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { DemandeNewComponent } from './demande-new/demande-new.component';
   declarations: [
     DemandeListComponent,
     DemandeEditComponent,
-    DemandeNewComponent
+    DemandeNewComponent,
+    MaintenanceComponent
   ],
   providers: [DemandeService],
   exports: []

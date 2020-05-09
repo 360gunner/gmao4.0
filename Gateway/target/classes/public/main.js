@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n  <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n  <li class=\"breadcrumb-item active\">Demande</li>\n</ol>\n<div class=\"card\">\n  <div class=\"header\">\n    <h2 class=\"title\">Demande Detail</h2>\n  </div>\n  <div class=\"content\">\n    <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n    <form *ngIf=\"Demande\" #editForm=\"ngForm\" (ngSubmit)=\"save()\">\n    \n      <div class=\"form-group\">\n        <label for=\"id\">Id</label>\n        <input type=\"number\" [(ngModel)]=\"Demande.id\" id=\"id\" name=\"id\" class=\"form-control\">\n      </div>\n    \n      <div class=\"form-group\">\n        <label for=\"etat\">Etat</label>\n        <input [(ngModel)]=\"Demande.etat\" id=\"etat\" name=\"etat\" class=\"form-control\">\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"objet\">Objet</label>\n        <input [(ngModel)]=\"Demande.objet\" id=\"objet\" name=\"objet\" class=\"form-control\">\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"type\">Type</label>\n        <input [(ngModel)]=\"Demande.type\" id=\"type\" name=\"type\" class=\"form-control\">\n      </div>\n\n    \n      <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"!editForm.form.valid\">Save</button>\n      <button type=\"button\" class=\"btn btn-secondary\" (click)=\"cancel()\">Cancel</button>\n    </form>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n  <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n  <li class=\"breadcrumb-item\"><a routerLink=\"/maintenance\">Maintenance</a></li>\n  <li class=\"breadcrumb-item active\">Demande</li>\n</ol>\n<div class=\"card\">\n  <div class=\"header\">\n    <h2 class=\"title\">Demande Detail</h2>\n  </div>\n  <div class=\"content\">\n    <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n    <form *ngIf=\"Demande\" #editForm=\"ngForm\" (ngSubmit)=\"save()\">\n    \n      <div class=\"form-group\">\n        <label for=\"id\">Id</label>\n        <input type=\"number\" [(ngModel)]=\"Demande.id\" id=\"id\" name=\"id\" class=\"form-control\">\n      </div>\n    \n      <div class=\"form-group\">\n        <label for=\"etat\">Etat</label>\n        <input [(ngModel)]=\"Demande.etat\" id=\"etat\" name=\"etat\" class=\"form-control\">\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"objet\">Objet</label>\n        <input [(ngModel)]=\"Demande.objet\" id=\"objet\" name=\"objet\" class=\"form-control\">\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"type\">Type</label>\n        <input [(ngModel)]=\"Demande.type\" id=\"type\" name=\"type\" class=\"form-control\">\n      </div>\n\n    \n      <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"!editForm.form.valid\">Save</button>\n      <button type=\"button\" class=\"btn btn-secondary\" (click)=\"cancel()\">Cancel</button>\n    </form>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n  <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n  <li class=\"breadcrumb-item active\">Demande</li>\n</ol>\n<div class=\"card\">\n  <div class=\"header\">\n    <h2 class=\"title\">Liste des demandes</h2>\n  </div>\n  <div class=\"content\">\n    <form #f=\"ngForm\">\n      \n     <!-- <div class=\"form-group\">\n        <label for=\"type\">Type:</label>\n        <input [(ngModel)]=\"filter.type\" id=\"type\" name=\"type\" class=\"form-control\">\n      </div>\n\n      \n      <button (click)=\"search()\" [disabled]=\"!f?.valid\" class=\"btn btn-primary\">Search</button>\n      --><a [routerLink]=\"['../newDemande' ]\" class=\"btn btn-default\">New</a>\n    </form>\n  </div>\n</div>\n<div class=\"card\" *ngIf=\"DemandeList.length > 0\">\n  <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-centered table-hover mb-0\" id=\"datatable\">\n      <thead>\n        <tr>\n          <th class=\"border-top-0\" scope=\"col\">Id</th>\n          <th class=\"border-top-0\" scope=\"col\">etat</th>\n          <th class=\"border-top-0\" scope=\"col\">objet</th>\n          <th class=\"border-top-0\" scope=\"col\">type</th>\n          <th class=\"border-top-0\" scope=\"col\" style=\"width:120px\"></th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let item of DemandeList\" [class.active]=\"item === selectedDemande\">\n        \n          <td>{{item.id}}</td>\n          <td>{{item.etat}}</td>\n          <td>{{item.objet}}</td>\n          <td>{{item.type}}</td>\n          <td style=\"white-space: nowrap\">\n            <a [routerLink]=\"['../Demande', item.id ]\" class=\"btn btn-secondary\">Edit</a>&nbsp;\n            <button (click)=\"delete(item)\" class=\"btn btn-danger\">Delete</button>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n  <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n  <li class=\"breadcrumb-item\"><a routerLink=\"/maintenance\">Maintenance</a></li>\n  <li class=\"breadcrumb-item active\">Demande</li>\n</ol>\n<div class=\"card\">\n  <div class=\"header\">\n    <h2 class=\"title\">Liste des demandes</h2>\n  </div>\n  <div class=\"content\">\n    <form #f=\"ngForm\">\n      \n     <!-- <div class=\"form-group\">\n        <label for=\"type\">Type:</label>\n        <input [(ngModel)]=\"filter.type\" id=\"type\" name=\"type\" class=\"form-control\">\n      </div>\n\n      \n      <button (click)=\"search()\" [disabled]=\"!f?.valid\" class=\"btn btn-primary\">Search</button>\n      --><a [routerLink]=\"['../newDemande' ]\" class=\"btn btn-default\">New</a>\n    </form>\n  </div>\n</div>\n<div class=\"card\" *ngIf=\"DemandeList.length > 0\">\n  <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-centered table-hover mb-0\" id=\"datatable\">\n      <thead>\n        <tr>\n          <th class=\"border-top-0\" scope=\"col\">Id</th>\n          <th class=\"border-top-0\" scope=\"col\">etat</th>\n          <th class=\"border-top-0\" scope=\"col\">objet</th>\n          <th class=\"border-top-0\" scope=\"col\">type</th>\n          <th class=\"border-top-0\" scope=\"col\" style=\"width:120px\"></th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let item of DemandeList\" [class.active]=\"item === selectedDemande\">\n        \n          <td>{{item.id}}</td>\n          <td>{{item.etat}}</td>\n          <td>{{item.objet}}</td>\n          <td>{{item.type}}</td>\n          <td style=\"white-space: nowrap\">\n            <a [routerLink]=\"['../Demande', item.id ]\" class=\"btn btn-secondary\">Edit</a>&nbsp;\n            <button (click)=\"delete(item)\" class=\"btn btn-danger\">Delete</button>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -61,7 +61,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n    <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n    <li class=\"breadcrumb-item active\">Demande</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"header\">\n      <h2 class=\"title\">Demande Detail</h2>\n    </div>\n    <div class=\"content\">\n      <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n      <form #editForm=\"ngForm\" (ngSubmit)=\"save()\">\n      \n        <div class=\"form-group\">\n          <label for=\"id\">Id</label>\n          <input type=\"number\" [(ngModel)]=\"Demande.id\" id=\"id\" name=\"id\" class=\"form-control\">\n        </div>\n      \n        <div class=\"form-group\">\n          <label for=\"etat\">Etat</label>\n          <input [(ngModel)]=\"Demande.etat\" id=\"etat\" name=\"etat\" class=\"form-control\">\n        </div>\n  \n        <div class=\"form-group\">\n          <label for=\"objet\">Objet</label>\n          <input [(ngModel)]=\"Demande.objet\" id=\"objet\" name=\"objet\" class=\"form-control\">\n        </div>\n  \n        <div class=\"form-group\">\n          <label for=\"type\">Type</label>\n          <input [(ngModel)]=\"Demande.type\" id=\"type\" name=\"type\" class=\"form-control\">\n        </div>\n  \n      \n        <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"!editForm.form.valid\">Save</button>\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"cancel()\">Cancel</button>\n      </form>\n    </div>\n  </div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n    <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n    <li class=\"breadcrumb-item\"><a routerLink=\"/maintenance\">Maintenance</a></li>\n    <li class=\"breadcrumb-item active\">Demande</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"header\">\n      <h2 class=\"title\">Demande Detail</h2>\n    </div>\n    <div class=\"content\">\n      <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n      <form #editForm=\"ngForm\" (ngSubmit)=\"save()\">\n      \n        <div class=\"form-group\">\n          <label for=\"id\">Id</label>\n          <input type=\"number\" [(ngModel)]=\"Demande.id\" id=\"id\" name=\"id\" class=\"form-control\">\n        </div>\n      \n        <div class=\"form-group\">\n          <label for=\"etat\">Etat</label>\n          <input [(ngModel)]=\"Demande.etat\" id=\"etat\" name=\"etat\" class=\"form-control\">\n        </div>\n  \n        <div class=\"form-group\">\n          <label for=\"objet\">Objet</label>\n          <input [(ngModel)]=\"Demande.objet\" id=\"objet\" name=\"objet\" class=\"form-control\">\n        </div>\n  \n        <div class=\"form-group\">\n          <label for=\"type\">Type</label>\n          <input [(ngModel)]=\"Demande.type\" id=\"type\" name=\"type\" class=\"form-control\">\n        </div>\n  \n      \n        <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"!editForm.form.valid\">Save</button>\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"cancel()\">Cancel</button>\n      </form>\n    </div>\n  </div>\n  ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/maintenance/maintenance/maintenance.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/maintenance/maintenance/maintenance.component.html ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n    <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n    <li class=\"breadcrumb-item active\">Maintenance</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"header\">\n      <h2 class=\"title\">Liste des tables</h2>\n    </div>\n    <div class=\"content\">\n      <form #f=\"ngForm\">\n        \n       <!-- <div class=\"form-group\">\n          <label for=\"type\">Type:</label>\n          <input [(ngModel)]=\"filter.type\" id=\"type\" name=\"type\" class=\"form-control\">\n        </div>\n  \n        \n        <button (click)=\"search()\" [disabled]=\"!f?.valid\" class=\"btn btn-primary\">Search</button>\n        --><a routerLink=\"/maintenance/Demande\" class=\"btn btn-default\">Demande</a>\n      </form>\n    </div>\n  </div>\n  ");
 
 /***/ }),
 
@@ -87,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"sidebar-wrapper\">\n  <div class=\"logo\">\n    <a class=\"simple-text\">\n      <div class=\"logo-img\">\n        <img src=\"../../assets/img/angular2-logo.png\" alt=\"\">\n      </div>\n      GMAO\n    </a>\n  </div>\n  <ul class=\"nav\">\n    <li>\n      <a routerLink=\"home\">\n        <i class=\"ti-home\"></i>\n        <p>Home</p>\n      </a>\n    </li>\n\n    <li >\n      <div [hidden]=\"tpmm\">\n      <a routerLink=\"maintenance/Demande\">\n        <i class=\"ti-arrow-top-right\"></i>\n        <p>Maintenance</p>\n      </a>\n      </div>\n    </li>\n\n    <li >\n      <div [hidden]=\"gest\">\n      <a routerLink=\"stock/Demande\">\n        <i class=\"ti-arrow-top-right\"></i>\n        <p>Stock</p>\n      </a>\n     </div>\n    </li>\n\n\n\n  </ul>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"sidebar-wrapper\">\n  <div class=\"logo\">\n    <a class=\"simple-text\">\n      <div class=\"logo-img\">\n        <img src=\"../../assets/img/elit-logo.png\" alt=\"\">\n      </div>\n      GMAO\n    </a>\n  </div>\n  <ul class=\"nav\">\n    <li>\n      <a routerLink=\"home\">\n        <i class=\"ti-home\"></i>\n        <p>Home</p>\n      </a>\n    </li>\n\n    <li >\n      <div [hidden]=\"tpmm\">\n      <a routerLink=\"maintenance\">\n        <i class=\"ti-arrow-top-right\"></i>\n        <p>Maintenance</p>\n      </a>\n      </div>\n    </li>\n\n    <li >\n      <div [hidden]=\"gest\">\n      <a routerLink=\"stock\">\n        <i class=\"ti-arrow-top-right\"></i>\n        <p>Stock</p>\n      </a>\n     </div>\n    </li>\n\n    <li >\n      <div >\n      <a routerLink=\"home\">\n        <i class=\"ti-arrow-top-right\"></i>\n        <p>Achat</p>\n      </a>\n     </div>\n    </li>\n\n\n\n  </ul>\n</div>\n");
 
 /***/ }),
 
@@ -100,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n  <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n  <li class=\"breadcrumb-item active\">Demande</li>\n</ol>\n<div class=\"card\">\n  <div class=\"header\">\n    <h2 class=\"title\">Demande Detail</h2>\n  </div>\n  <div class=\"content\">\n    <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n    <form *ngIf=\"Demande\" #editForm=\"ngForm\" (ngSubmit)=\"save()\">\n    \n      <div class=\"form-group\">\n        <label for=\"id\">Id</label>\n        <input type=\"number\" [(ngModel)]=\"Demande.id\" id=\"id\" name=\"id\" class=\"form-control\">\n      </div>\n    \n      <div class=\"form-group\">\n        <label for=\"etat\">Etat</label>\n        <input [(ngModel)]=\"Demande.etat\" id=\"etat\" name=\"etat\" class=\"form-control\">\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"objet\">Objet</label>\n        <input [(ngModel)]=\"Demande.objet\" id=\"objet\" name=\"objet\" class=\"form-control\">\n      </div>\n\n\n\n    \n      <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"!editForm.form.valid\">Save</button>\n      <button type=\"button\" class=\"btn btn-secondary\" (click)=\"cancel()\">Cancel</button>\n    </form>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n  <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n  <li class=\"breadcrumb-item\"><a routerLink=\"/Stock\">Stock</a></li>\n  <li class=\"breadcrumb-item active\">Demande</li>\n</ol>\n<div class=\"card\">\n  <div class=\"header\">\n    <h2 class=\"title\">Demande Detail</h2>\n  </div>\n  <div class=\"content\">\n    <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n    <form *ngIf=\"Demande\" #editForm=\"ngForm\" (ngSubmit)=\"save()\">\n    \n      <div class=\"form-group\">\n        <label for=\"id\">Id</label>\n        <input type=\"number\" [(ngModel)]=\"Demande.id\" id=\"id\" name=\"id\" class=\"form-control\">\n      </div>\n    \n      <div class=\"form-group\">\n        <label for=\"etat\">Etat</label>\n        <input [(ngModel)]=\"Demande.etat\" id=\"etat\" name=\"etat\" class=\"form-control\">\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"objet\">Objet</label>\n        <input [(ngModel)]=\"Demande.objet\" id=\"objet\" name=\"objet\" class=\"form-control\">\n      </div>\n\n\n\n    \n      <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"!editForm.form.valid\">Save</button>\n      <button type=\"button\" class=\"btn btn-secondary\" (click)=\"cancel()\">Cancel</button>\n    </form>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -113,7 +126,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n  <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n  <li class=\"breadcrumb-item active\">Demande</li>\n</ol>\n<div class=\"card\">\n  <div class=\"header\">\n    <h2 class=\"title\">Liste des demandes materiels</h2>\n  </div>\n <!-- <div class=\"content\">\n    <form #f=\"ngForm\">\n      \n      <div class=\"form-group\">\n        <label for=\"type\">Type:</label>\n        <input [(ngModel)]=\"filter.type\" id=\"type\" name=\"type\" class=\"form-control\">\n      </div>\n\n      \n      <button (click)=\"search()\" [disabled]=\"!f?.valid\" class=\"btn btn-primary\">Search</button>\n      <a [routerLink]=\"['../newDemande' ]\" class=\"btn btn-default\">New</a>\n    </form>\n  </div>-->\n</div>\n<div class=\"card\" *ngIf=\"DemandeList.length > 0\">\n  <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-centered table-hover mb-0\" id=\"datatable\">\n      <thead>\n        <tr>\n          <th class=\"border-top-0\" scope=\"col\">Id</th>\n          <th class=\"border-top-0\" scope=\"col\">etat</th>\n          <th class=\"border-top-0\" scope=\"col\">objet</th>\n          <th class=\"border-top-0\" scope=\"col\" style=\"width:120px\"></th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let item of DemandeList\" [class.active]=\"item === selectedDemande\">\n        \n          <td>{{item.id}}</td>\n          <td>{{item.etat}}</td>\n          <td>{{item.objet}}</td>\n          <td style=\"white-space: nowrap\">\n            <a [routerLink]=\"['../Demande', item.id ]\" class=\"btn btn-secondary\">Edit</a>&nbsp;\n            <button (click)=\"delete(item)\" class=\"btn btn-danger\">Delete</button>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n  <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n  <li class=\"breadcrumb-item\"><a routerLink=\"/stock\">Stock</a></li>\n  <li class=\"breadcrumb-item active\">Demande</li>\n</ol>\n<div class=\"card\">\n  <div class=\"header\">\n    <h2 class=\"title\">Liste des demandes materiels</h2>\n  </div>\n <!-- <div class=\"content\">\n    <form #f=\"ngForm\">\n      \n      <div class=\"form-group\">\n        <label for=\"type\">Type:</label>\n        <input [(ngModel)]=\"filter.type\" id=\"type\" name=\"type\" class=\"form-control\">\n      </div>\n\n      \n      <button (click)=\"search()\" [disabled]=\"!f?.valid\" class=\"btn btn-primary\">Search</button>\n      <a [routerLink]=\"['../newDemande' ]\" class=\"btn btn-default\">New</a>\n    </form>\n  </div>-->\n</div>\n<div class=\"card\" *ngIf=\"DemandeList.length > 0\">\n  <div *ngIf=\"feedback\" class=\"alert alert-{{feedback.type}}\">{{ feedback.message }}</div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-centered table-hover mb-0\" id=\"datatable\">\n      <thead>\n        <tr>\n          <th class=\"border-top-0\" scope=\"col\">Id</th>\n          <th class=\"border-top-0\" scope=\"col\">etat</th>\n          <th class=\"border-top-0\" scope=\"col\">objet</th>\n          <th class=\"border-top-0\" scope=\"col\" style=\"width:120px\"></th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let item of DemandeList\" [class.active]=\"item === selectedDemande\">\n        \n          <td>{{item.id}}</td>\n          <td>{{item.etat}}</td>\n          <td>{{item.objet}}</td>\n          <td style=\"white-space: nowrap\">\n            <a [routerLink]=\"['../Demande', item.id ]\" class=\"btn btn-secondary\">Edit</a>&nbsp;\n            <button (click)=\"delete(item)\" class=\"btn btn-danger\">Delete</button>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/stock/stock/stock.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/stock/stock/stock.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ol class=\"breadcrumb float-right\">\n    <li class=\"breadcrumb-item\"><a routerLink=\"/\">Home</a></li>\n    <li class=\"breadcrumb-item active\">Stock</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"header\">\n      <h2 class=\"title\">Liste des tables</h2>\n    </div>\n    <div class=\"content\">\n      <form #f=\"ngForm\">\n        \n       <!-- <div class=\"form-group\">\n          <label for=\"type\">Type:</label>\n          <input [(ngModel)]=\"filter.type\" id=\"type\" name=\"type\" class=\"form-control\">\n        </div>\n  \n        \n        <button (click)=\"search()\" [disabled]=\"!f?.valid\" class=\"btn btn-primary\">Search</button>  -->\n        <a routerLink=\"/stock/Demande\" class=\"btn btn-default\">Demande</a>\n        <a routerLink=\"/stock/\" class=\"btn btn-default\">Sortie</a>\n        <a routerLink=\"/stock/\" class=\"btn btn-default\">Reception</a>\n        <a routerLink=\"/stock/\" class=\"btn btn-default\">Dotation</a>\n      </form>\n    </div>\n  </div>\n  ");
 
 /***/ }),
 
@@ -462,10 +488,12 @@ var LoginService = /** @class */ (function () {
         this.http.get('/stock/').subscribe(function (response) {
             console.log(response);
             _this.data2 = response;
-            if ((_this.data2.status == 403) || (_this.data2.status == 401))
+            if ((_this.data2.status == 403) || (_this.data2.status == 401)) {
                 _this.gest = false;
-            else
+            }
+            else {
                 _this.gest = true;
+            }
         });
         return this.gest;
     };
@@ -763,6 +791,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Demande_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Demande.service */ "./src/app/maintenance/Demande.service.ts");
 /* harmony import */ var _Demande_routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Demande.routes */ "./src/app/maintenance/Demande.routes.ts");
 /* harmony import */ var _demande_new_demande_new_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./demande-new/demande-new.component */ "./src/app/maintenance/demande-new/demande-new.component.ts");
+/* harmony import */ var _maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./maintenance/maintenance.component */ "./src/app/maintenance/maintenance/maintenance.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -772,6 +801,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -794,7 +824,8 @@ var DemandeMaintenanceModule = /** @class */ (function () {
             declarations: [
                 _Demande_list_Demande_list_component__WEBPACK_IMPORTED_MODULE_4__["DemandeListComponent"],
                 _Demande_edit_Demande_edit_component__WEBPACK_IMPORTED_MODULE_5__["DemandeEditComponent"],
-                _demande_new_demande_new_component__WEBPACK_IMPORTED_MODULE_8__["DemandeNewComponent"]
+                _demande_new_demande_new_component__WEBPACK_IMPORTED_MODULE_8__["DemandeNewComponent"],
+                _maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_9__["MaintenanceComponent"]
             ],
             providers: [_Demande_service__WEBPACK_IMPORTED_MODULE_6__["DemandeService"]],
             exports: []
@@ -820,9 +851,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Demande_list_Demande_list_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Demande-list/Demande-list.component */ "./src/app/maintenance/Demande-list/Demande-list.component.ts");
 /* harmony import */ var _Demande_edit_Demande_edit_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Demande-edit/Demande-edit.component */ "./src/app/maintenance/Demande-edit/Demande-edit.component.ts");
 /* harmony import */ var _demande_new_demande_new_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./demande-new/demande-new.component */ "./src/app/maintenance/demande-new/demande-new.component.ts");
+/* harmony import */ var _maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./maintenance/maintenance.component */ "./src/app/maintenance/maintenance/maintenance.component.ts");
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -838,6 +871,10 @@ var DEMANDE_ROUTES = [
     {
         path: 'maintenance/Demande/:id',
         component: _Demande_edit_Demande_edit_component__WEBPACK_IMPORTED_MODULE_1__["DemandeEditComponent"]
+    },
+    {
+        path: 'maintenance',
+        component: _maintenance_maintenance_component__WEBPACK_IMPORTED_MODULE_3__["MaintenanceComponent"]
     }
 ];
 
@@ -1046,6 +1083,49 @@ var DemandeNewComponent = /** @class */ (function () {
             _Demande_service__WEBPACK_IMPORTED_MODULE_2__["DemandeService"]])
     ], DemandeNewComponent);
     return DemandeNewComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/maintenance/maintenance/maintenance.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/maintenance/maintenance/maintenance.component.ts ***!
+  \******************************************************************/
+/*! exports provided: MaintenanceComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaintenanceComponent", function() { return MaintenanceComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+var MaintenanceComponent = /** @class */ (function () {
+    function MaintenanceComponent() {
+    }
+    MaintenanceComponent.prototype.ngOnInit = function () {
+    };
+    MaintenanceComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-maintenance',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./maintenance.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/maintenance/maintenance/maintenance.component.html")).default
+        }),
+        __metadata("design:paramtypes", [])
+    ], MaintenanceComponent);
+    return MaintenanceComponent;
 }());
 
 
@@ -1409,6 +1489,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Demande_edit_Demande_edit_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Demande-edit/Demande-edit.component */ "./src/app/stock/Demande-edit/Demande-edit.component.ts");
 /* harmony import */ var _Demande_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Demande.service */ "./src/app/stock/Demande.service.ts");
 /* harmony import */ var _Demande_routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Demande.routes */ "./src/app/stock/Demande.routes.ts");
+/* harmony import */ var _stock_stock_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./stock/stock.component */ "./src/app/stock/stock/stock.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1418,6 +1499,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -1438,7 +1520,8 @@ var DemandeStockModule = /** @class */ (function () {
             ],
             declarations: [
                 _Demande_list_Demande_list_component__WEBPACK_IMPORTED_MODULE_4__["DemandeListComponent"],
-                _Demande_edit_Demande_edit_component__WEBPACK_IMPORTED_MODULE_5__["DemandeEditComponent"]
+                _Demande_edit_Demande_edit_component__WEBPACK_IMPORTED_MODULE_5__["DemandeEditComponent"],
+                _stock_stock_component__WEBPACK_IMPORTED_MODULE_8__["StockComponent"]
             ],
             providers: [_Demande_service__WEBPACK_IMPORTED_MODULE_6__["DemandeService"]],
             exports: []
@@ -1463,9 +1546,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEMANDE_ROUTES", function() { return DEMANDE_ROUTES; });
 /* harmony import */ var _Demande_list_Demande_list_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Demande-list/Demande-list.component */ "./src/app/stock/Demande-list/Demande-list.component.ts");
 /* harmony import */ var _Demande_edit_Demande_edit_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Demande-edit/Demande-edit.component */ "./src/app/stock/Demande-edit/Demande-edit.component.ts");
+/* harmony import */ var _stock_stock_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./stock/stock.component */ "./src/app/stock/stock/stock.component.ts");
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 var DEMANDE_ROUTES = [
@@ -1476,6 +1561,10 @@ var DEMANDE_ROUTES = [
     {
         path: 'stock/Demande/:id',
         component: _Demande_edit_Demande_edit_component__WEBPACK_IMPORTED_MODULE_1__["DemandeEditComponent"]
+    },
+    {
+        path: 'stock',
+        component: _stock_stock_component__WEBPACK_IMPORTED_MODULE_2__["StockComponent"]
     }
 ];
 
@@ -1595,6 +1684,49 @@ var Demande = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/stock/stock/stock.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/stock/stock/stock.component.ts ***!
+  \************************************************/
+/*! exports provided: StockComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StockComponent", function() { return StockComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+var StockComponent = /** @class */ (function () {
+    function StockComponent() {
+    }
+    StockComponent.prototype.ngOnInit = function () {
+    };
+    StockComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-stock',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./stock.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/stock/stock/stock.component.html")).default
+        }),
+        __metadata("design:paramtypes", [])
+    ], StockComponent);
+    return StockComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -1661,7 +1793,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\UI\angular-crud-master\demo\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\gmao4.0\Gateway\src\demo\src\main.ts */"./src/main.ts");
 
 
 /***/ })
